@@ -1,0 +1,29 @@
+{
+    "name": "base-wp",
+    "authors": [
+        {
+            "name": "Nuccelsa",
+            "email": "fredenucci.elsa@gmail.com"
+        }
+    ],
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://wpackagist.org"
+      }
+    ],
+    "require": {
+      "php": ">=5.4",
+      "johnpbloch/wordpress": "4.*",
+      "wpackagist-plugin/advanced-custom-fields": "*",
+      "wpackagist-plugin/contact-form-7": "*",
+      "wpackagist-theme/twentyseventeen":"*"
+    },
+    "extra": {
+      "wordpress-install-dir": "wp",
+      "installer-paths": {
+          "content/plugins/{$name}/": ["type:wordpress-plugin"],
+          "content/themes/{$name}/": ["type:wordpress-theme"]
+      }
+    }
+}
